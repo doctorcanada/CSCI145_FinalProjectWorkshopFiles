@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Dolphin()
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Dolphin\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment2.params=
+comment2.target=void\ updateImage()
+comment2.text=\r\n\ When\ this\ method\ is\ called,\ it\ updates\ the\ actor\ object's\r\n\ image\ to\ whatever\ is\ the\ next\ frame\ in\ the\ images\ array\r\n\ \r\n\ if\ the\ imageIndex\ exceeds\ the\ highest\ index\ in\ the\ array,\r\n\ then\ the\ imageIndex\ is\ reset\ to\ zero.\r\n\ \r\n
+numComments=3
