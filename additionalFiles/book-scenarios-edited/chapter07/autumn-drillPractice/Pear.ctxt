@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Pear()
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\n\ Act\ -\ do\ whatever\ the\ Pear\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
+comment2.params=
+comment2.target=boolean\ isMoving()
+comment3.params=moving
+comment3.target=void\ setMoving(boolean)
+comment4.params=
+comment4.target=void\ incrementPixelsMoved()
+comment5.params=
+comment5.target=int\ getPixelsMoved()
+numComments=6

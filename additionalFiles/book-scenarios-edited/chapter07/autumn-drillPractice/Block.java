@@ -42,6 +42,55 @@ public class Block extends Actor
             // MyWorld world = (MyWorld)getWorld();
             // getWorld().addObject( new Leaf(), 100, 100 );
             // world.addObject( new Leaf(), getX(), getY() );
+            
+            /* 
+             * Ex. 7.16: Turn all apple objects by 90 degrees 
+             */
+            MyWorld world = (MyWorld)getWorld(); // <-- make instance variable b/c of reuse?
+            
+            List<Apple> apples = world.getObjects( Apple.class );
+            for ( Apple apple : apples )
+            {
+                apple.turn(90);
+                
+                /* optional "debug" statement to print out the current apple object */
+                System.out.println( "Object " + apple + " has been rotated 90 degrees!" );
+                
+                // (and we'll do the same for any remaining apples in the List)
+            } // end for-each 
+            
+            /*
+             * Ex 7.18
+             */
+            List<Pear> pears = world.getObjects( Pear.class );
+            for ( Pear pear : pears )
+            {
+                // pear.move(20); // we could incorporate some smoother animation as well
+                  
+                /*
+                 * Modify the above for Ex. 7.19
+                 */
+                if ( pear.getX() >= (world.getWidth() - 20) ) // allow for 20 pixel threshold
+                {
+                    pear.setLocation( 0, pear.getY() ); // same Y, but move to left screen edge
+                }
+                else
+                {
+                    // pear.move(20); // as before
+                    
+                    // for smoother animation:
+                    if ( !(pear.isMoving()) )
+                    {
+                        pear.setMoving( true );
+                    } // end if
+                } // end if-else
+                
+               
+                /* optional "debug" statement to print out the current apple object */
+                System.out.println( "Object " + pear + " has been moved!" );
+                
+                // (and we'll do the same for any remaining pears in the List)
+            } // end for-each 
         }
     }
     
@@ -72,7 +121,16 @@ public class Block extends Actor
                 // "leaf" is the reference to the current Leaf object, 
                 // so we will call the INSTANCE METHOD changeImage to 
                 // "tell" the current Leaf object to change its image
-                leaf.changeImage();
+                // leaf.changeImage();
+                
+                /*
+                 * Ex 7.20 check position of leaf; only change image if in 
+                 *   the left half of the world
+                 */
+                if ( leaf.getX() <= world.getWidth() / 2.0 )
+                {
+                    leaf.changeImage();
+                }
                 
                 /* optional "debug" statement to print out the current leaf */
                 System.out.println( "Image for object " + leaf + " has changed!" );
